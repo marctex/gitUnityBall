@@ -16,5 +16,5 @@ public class MoveCamera : MonoBehaviour
     void LateUpdate()
     {
         transform.position = objectBall.transform.position + positionInitial;
-    }
+    }    
 }

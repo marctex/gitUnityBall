@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnCube : MonoBehaviour
+public class DestroyObject : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("ClearObject", 1.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(15, 25, 45) * Time.deltaTime); 
-    }   
+        
+    }
+
+    void ClearObject()
+    {
+        Destroy(this.gameObject);
+    }
 }
